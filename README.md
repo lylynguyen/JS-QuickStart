@@ -2,6 +2,88 @@
 > Set up the required tools and frameworks for Full-Stack JavaScript Development
 
 <em> Welcome to the JS QuickStart Instructions! </em>
+
+Table of Contents:
+Windows | Mac
+
+## Windows
+
+This document aims to provide a guide for setting up the developer's workstation on Windows operating system using chocolatey package manager.
+
+REQUIREMENTS
+* Processor: Intel Core i3 or higher (ideally Core i5 or i7) 2GHz or more recommended
+* Memory: 4GB (8 to 16GB recommended) DDR3
+* Hard Drive: 250GB recommended
+* Operating System: Windows 7 or higher
+
+1. SET UP CHOCOLATEY
+Chocolatey is the package manager for Windows. You'll use it to install various software componets on your workstation.
+
+* In the Windows Start menu, select "Search programs and files" and search "cmd.exe". 
+* Right click it and select "Run as administrator". 
+
+This will fire up a plain windows command line (cmd.exe) as administrator
+<em> Now you're ready to copy the following command into the command line.</em>
+
+| Command       | Result       |
+|:------------- |:-------------|
+|`@powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin` | This should download and setup chocolatey using powershell. |
+|`choco version` | Checks whether everything is working. You should see the current version of Chocolatey if the installation process finished successfully. |
+|Install the software:|
+| ss|ss |
+
+<em>If you encounter any issues during the installation process check whether you are running cmd as administrator. Entering the chocolatey installation command in any kind of Unix shell will result in a failure. Be sure to use plain cmd.exe program for the installation. </em>
+
+2. INSTALL THE SOFTWARE
+
+| `cinst -y git --version 1.9.5.20150320 php --version 7.0.3 nodejs.install -version 4.4.3 vcredist2015 & refreshenv` | Installs GIT, PHP, nodejs and vcredist packages |
+
+At this point you want to ensure that git command is recognized. You may want to restart the command prompt. Also please ensure you have access to your project's repository.
+
+Now we are going to download arcanist package from [github] repository and install it (You may be prompted to enter your credentials).
+
+| `cd %USERPROFILE%\AppData\Local\Temp & git clone https://[github].[business].com/chocolatey-repo/arcanist.git && move arcanist\php.ini C:\tools\php\ && cinst -y arcanist.portable -source %USERPROFILE%\AppData\Local\Temp\arcanist & rmdir /S /Q arcanist` | This command adds arcanist binary and npm to the PATH environment variable so we can use it. |
+
+SETX PATH "%PATH%;C:\tools\php;C:\ProgramData\chocolatey\lib\arcanist.portable\tools\arcanist\bin; & refreshenv"
+POST INSTALLATION CONFIGURATION
+Arcanist requires you to set up an editor. This editor will be used to present you with differential forms.
+The following example uses vim installed with git.
+
+arc set-config editor "C:\Program Files(x86)\Git\share\vim\vim74\vim.exe"
+To work with [github] need to generate rsa keys and set public key (id_rsa.pub) in [github] (Dashboard -> Manage SSH keys). To run ssh-keygen command, you might have to run git-bash first (right clink on 'desktop' and select 'Git Bash Here' option).
+
+If GitHub usage is blocked via git protocol, you will need to set it up to use https instead. Following command will do the trick:
+
+git config --global url."https://".insteadOf git://
+TESTING OUR INSTALLATION
+The software installed includes:
+
+NodeJS,
+Git,
+Arcanist (+ php & vcredist2012 as dependencies)
+Now restarting the command line allows this change to the environment variable to take effect.
+
+You can test whether nodejs/npm is working fine by installing grunt and bower globally npm install bower grunt-cli -g and running grunt.
+
+To test arcanist package run arc help and you should see the arcanist command reference.
+
+OPTIONAL SOFTWARE
+You can install additional (optional) software (caution, will download full size installers)
+
+cinst -y google-chrome-x64 Firefox vagrant virtualbox phantomjs atom boot2docker
+Additional software includes:
+
+Google Chrome
+Firefox,
+Vagrant,
+VirtualBox
+PhantomJS
+Atom
+boot2docker
+To install specific packages (due to low connection or failed attempt) modify the command to include only desired packages (i.e. cinst -y nodejs).
+
+
+## Mac OS
 <em> Have you got your Apple OS X Macbook ready to go? Let's do it! </em>
 
 <<< UNDER CONSTRUCTION >>>
