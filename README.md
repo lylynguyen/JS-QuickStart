@@ -1,10 +1,10 @@
 # JS-QuickStart
 > Set up the required tools and frameworks for Full-Stack JavaScript Development
 
-NOTE: THIS README IS UNDER CONSTRUCTION.
-
 <em> Welcome to the JS QuickStart Instructions! </em>
 <em> Have you got your Apple OS X Macbook ready to go? Let's do it! </em>
+
+<<< UNDER CONSTRUCTION >>>
 
 #### Navigate to the Terminal (Command + SPACEBAR)
 *Once prompted, copy the commands below:*
