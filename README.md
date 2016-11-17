@@ -44,10 +44,6 @@ This will fire up a plain windows command line (cmd.exe) as administrator
 | `cinst -y nodejs.install & refreshenv` | Installs nodejs |
 | `cinst -y vcredist2015 & refreshenv` | Installs vcredist2015 |
 | `git --version` | Ensures that the git command is recognized. You may want to restart the command prompt. Ensure you have access to your project's repository|
-| `cd %USERPROFILE%\AppData\Local\Temp & git clone https://[github].[business].com/chocolatey-repo/arcanist.git && move arcanist\php.ini C:\tools\php\ && cinst -y arcanist.portable -source %USERPROFILE%\AppData\Local\Temp\arcanist & rmdir /S /Q arcanist` | This command adds arcanist binary and npm to the PATH environment variable so we can use it. (You may be prompted to enter your credentials). |
-| SETX PATH "%PATH%;C:\tools\php;C:\ProgramData\chocolatey\lib\arcanist.portable\tools\arcanist\bin; & refreshenv" | |
-| arc set-config editor "C:\Program Files(x86)\Git\share\vim\vim74\vim.exe" | Arcanist requires you to set up an editor. This editor will be used to present you with differential forms. This example uses vim installed with git. |
-
 | To work with [github] need to generate rsa keys and set public key (id_rsa.pub) in [github] (Dashboard -> Manage SSH keys). |  To run ssh-keygen command, you might have to run git-bash first (right clink on 'desktop' and select 'Git Bash Here' option).|
 
 Note: If GitHub usage is blocked via git protocol, you will need to set it up to use https instead. Following command will do the trick:
@@ -57,13 +53,11 @@ TESTING OUR INSTALLATION
 The software installed includes:
 
 NodeJS,
-Git,
-Arcanist (+ php & vcredist2012 as dependencies)
+Git
+
 Now restarting the command line allows this change to the environment variable to take effect.
 
 You can test whether nodejs/npm is working fine by installing grunt and bower globally npm install bower grunt-cli -g and running grunt.
-
-To test arcanist package run arc help and you should see the arcanist command reference.
 
 OPTIONAL SOFTWARE
 You can install additional (optional) software (caution, will download full size installers)
@@ -77,6 +71,7 @@ Vagrant,
 VirtualBox
 PhantomJS
 Atom
+Sublime
 boot2docker
 To install specific packages (due to low connection or failed attempt) modify the command to include only desired packages (i.e. cinst -y nodejs).
 
