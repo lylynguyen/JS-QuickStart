@@ -27,7 +27,7 @@ Overview:
 4. POST-INSTALLATION CONFIGURATION<br>
 5. INSTALL OPTIONAL SOFTWARE<br>
 
-* In the Windows Start menu, select "Search programs and files" and search "cmd.exe". 
+* Select the In the Windows and start menu, start typing cmd.exe. 
 * Right click it and select "Run as administrator". 
 
 This will fire up a plain windows command line (cmd.exe) as administrator
@@ -37,10 +37,10 @@ This will fire up a plain windows command line (cmd.exe) as administrator
 |:------------- |:-------------|
 | SET UP CHOCOLATEY | |
 | `@powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin` | This should download and setup chocolatey using powershell. |
-| `choco version` | Checks whether everything is working. You should see the current version of Chocolatey if the installation process finished successfully. |
+| `choco --version` | Checks whether everything is working. You should see the current version of Chocolatey if the installation process finished successfully. |
 | INSTALL THE SOFTWARE| |
 | `cinst -y git` | Installs GIT |
-| `cinst -y php` | Installs PHP | 
+| `cinst -y php --ignore-checksums` | Installs PHP (ignore-checksum flag required since feature was only left in configuration because previous choco had it according to "https://github.com/chocolatey/choco/issues/112".) | 
 | `cinst -y nodejs.install` | Installs nodejs |
 | `cinst -y vcredist2015` | Installs vcredist2015 |
 | `cinst -y refreshenv` | Installs refreshenv |
