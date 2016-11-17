@@ -17,12 +17,15 @@ REQUIREMENTS
 
 Overview:
 1. SET UP CHOCOLATEY
-Chocolatey is the package manager for Windows. You'll use it to install various software componets on your workstation.
+ * Chocolatey is the package manager for Windows. You'll use it to install various software componets on your workstation.
+
 2. INSTALL THE SOFTWARE
-<em>If you encounter any issues during the installation process check whether you are running cmd as administrator. Entering the chocolatey installation command in any kind of Unix shell will result in a failure. Be sure to use plain cmd.exe program for the installation. </em>
-3. DOWNLOAD ARCHANIST
-4. POST-INSTALLATION CONFIGURATION
-5. INSTALL OPTIONAL SOFTWARE
+
+<em> If you encounter any issues during the installation process check whether you are running cmd as administrator. Entering the chocolatey installation command in any kind of Unix shell will result in a failure. Be sure to use plain cmd.exe program for the installation. </em> <br>
+
+3. DOWNLOAD ARCHANIST <br>
+4. POST-INSTALLATION CONFIGURATION<br>
+5. INSTALL OPTIONAL SOFTWARE<br>
 
 * In the Windows Start menu, select "Search programs and files" and search "cmd.exe". 
 * Right click it and select "Run as administrator". 
