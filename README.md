@@ -39,8 +39,12 @@ This will fire up a plain windows command line (cmd.exe) as administrator
 | `@powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin` | This should download and setup chocolatey using powershell. |
 | `choco version` | Checks whether everything is working. You should see the current version of Chocolatey if the installation process finished successfully. |
 | INSTALL THE SOFTWARE| |
-| `cinst -y git --version 1.9.5.20150320 php --version 7.0.3 nodejs.install -version 4.4.3 vcredist2015 & refreshenv` | Installs GIT, PHP, nodejs and vcredist packages |
-| git -v | Ensures that the git command is recognized. You may want to restart the command prompt. Ensure you have access to your project's repository|
+| `cinst -y git` | Installs GIT |
+| `cinst -y php` | Installs PHP | 
+| `cinst -y nodejs.install` | Installs nodejs |
+| `cinst -y vcredist2015` | Installs vcredist2015 |
+| `cinst -y refreshenv` | Installs refreshenv |
+| `git --version` | Ensures that the git command is recognized. You may want to restart the command prompt. Ensure you have access to your project's repository|
 | `cd %USERPROFILE%\AppData\Local\Temp & git clone https://[github].[business].com/chocolatey-repo/arcanist.git && move arcanist\php.ini C:\tools\php\ && cinst -y arcanist.portable -source %USERPROFILE%\AppData\Local\Temp\arcanist & rmdir /S /Q arcanist` | This command adds arcanist binary and npm to the PATH environment variable so we can use it. (You may be prompted to enter your credentials). |
 | SETX PATH "%PATH%;C:\tools\php;C:\ProgramData\chocolatey\lib\arcanist.portable\tools\arcanist\bin; & refreshenv" | |
 | arc set-config editor "C:\Program Files(x86)\Git\share\vim\vim74\vim.exe" | Arcanist requires you to set up an editor. This editor will be used to present you with differential forms. This example uses vim installed with git. |
