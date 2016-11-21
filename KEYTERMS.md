@@ -1,7 +1,7 @@
 # Key Terms
 
 
-| Concept       | Description |
+| Angular Concept       | Description |
 | ------------- |:---------------------------|
 | Template      | HTML with additional markup |
 | Directive     | extend HTML with custom attributes and elements     |
