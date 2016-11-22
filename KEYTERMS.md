@@ -15,7 +15,7 @@
 | Injector | dependency injection container |
 | Module | a container for the different parts of an app including controllers, services, filters, directives which configures the Injecctor |
 | Service | reusable business logic independent of views |
-(https://docs.angularjs.org/guide/concepts)
+(*Source:https://docs.angularjs.org/guide/concepts*)
 
 | Git Concepts       | Description | commands |
 | ------------- |:---------------------------|:-----:|
@@ -35,7 +35,7 @@
 | Push | or push refers to sending your committed changes to a remote repository such as Github.com. For example, if you change something locally, you'd want to then *push* those changes so that others may access them | `git push` |
 | Repository | is the most basic element of Github and can be thought of as a project's folder | |
 | Upstream | when talking about a branch or a fork, the primary branch on the original repository is often referred to as the "upstream", since that is the main place that other changes will come in from. The branch/fork you are working on is then called the "downstream".| `git remote add upstream` |
-(https://help.github.com/articles/github-glossary/)
+(*Source:https://help.github.com/articles/github-glossary/*)
 
 
 
